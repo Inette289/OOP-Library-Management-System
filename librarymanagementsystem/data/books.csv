@@ -1,0 +1,12 @@
+# id,title,author,borrowed,userId,borrowDate
+4,Clean Code,Robert Martin,false,-1,
+2,Effective Java,Joshua Bloch,false,-1,
+3,Java Programming,Herbert Schildt,false,-1,
+1,Don Quixote ,Miguel de Cervantes,false,-1,
+5,A Tale of Two Cities,Charles Dickens,false,-1,
+6,The Lord of the Rings,J.R.R. Tolkien,false,-1,
+7,The Little Prince,Antoine de Saint-Exupéry,false,-1,
+8,Harry Potter and the Sorcerer's Stone,J.K. Rowling,false,-1,
+9, And Then There Were None ,Agatha Christie,false,-1,
+10,The Dream of the Red Chamber,Cao Xueqin,false,-1,
+0,The Hobbit,J.R.R. Tolkien,false,-1,
