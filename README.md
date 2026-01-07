@@ -57,9 +57,6 @@ LibraryManagementSystem/
 
 Clone this repository:
 
-git clone https://github.com/your-username/LibraryManagementSystem.git
-
-
 Open the project in Eclipse or VS Code
 
 Ensure the data/ folder exists at the project root
