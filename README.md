@@ -1,96 +1,107 @@
-This project allows users to manage books and users, borrow and return books, and generate reports for borrowed and overdue books using CSV file storage.
+📚 Library Management System
+A console-based Library Management System built in Java.
+This project allows managing books and users, borrowing and returning books, tracking overdue items, and persisting data using CSV files.
 
 🚀 Features
+Book Management
+View all books
+Borrow and return books
+Tracks borrowing user and borrow date
+User Management
+View all users
+Store unique user IDs
+Reports
+Borrowed Books Report
+Overdue Books Report (books borrowed for more than 14 days)
+Input Validation
+Prevents crashes from invalid input (InputMismatchException, NumberFormatException)
+Data Persistence
+All data is stored in CSV files for persistence between runs
+Robust Console UI
+Menu-driven system with safe input handling
 
-📖 View all books and their availability
+🏗️ Technologies Used
+Language: Java
+IDE: VS Code / Eclipse
+File Handling: BufferedReader, BufferedWriter
+Java Time API: LocalDate, ChronoUnit for overdue calculation
+Data Storage: CSV files
+OOP Concepts: Encapsulation, composition, modular design
 
-👤 View registered users
+🛠️ Installation & Running
+Clone the repository
+git clone https://github.com/yourusername/library-management-system.git
 
-📥 Borrow books (linked to a user)
+    Open in IDE (VS Code, Eclipse, IntelliJ)
+    Ensure CSV files exist under data/ folder:
 
-📤 Return borrowed books
+data/books.csv
+data/users.csv
 
-📊 Borrowed books report
+    CSV headers are required, e.g., # id,title,author,borrowed,userId,borrowDate
+    Run the program
 
-⏰ Overdue books report (after 14 days)
+java -cp bin library.Main
 
-💾 Persistent data storage using CSV files
+🧩 Project Structure
 
-🧠 Clean separation of concerns using OOP
+library/
+│
+├─ Main.java         # Console UI
+├─ Library.java      # Business logic
+├─ Book.java         # Book model
+├─ User.java         # User model
+├─ FileManager.java  # File I/O
+└─ data/
+   ├─ books.csv
+   └─ users.csv
 
+📄 Sample CSV Format
 
-🛠️ Technologies Used
+books.csv
+# id,title,author,borrowed,userId,borrowDate
+1,The Alchemist,Paulo Coelho,false,-1,
+2,1984,George Orwell,false,-1,
 
-Java
+users.csv
 
+# id,name
+1,John Doe
+2,Jane Smith
+🎯 How it Works
+
+Program starts and loads books/users from CSV.
+Console menu allows the following actions:
+View all books
+Borrow a book
+Return a book
+View all users
+Generate borrowed books report
+Generate overdue books report
+User input is validated to prevent crashes.
+Changes are automatically saved to CSV files.
+
+🧠 Key Concepts Demonstrated
 Object-Oriented Programming (OOP)
+Classes with encapsulated data
+Modular design
+File Handling
+Reading and writing CSV files
+Exception Handling
+Prevent InputMismatchException and NumberFormatException
+Java Time API
+Track borrowing and overdue days
+Robust console interface
+Menu system with input validation
 
-File I/O (BufferedReader & BufferedWriter)
+🛠️ Future Improvements
+Add a GUI (JavaFX/Swing)
+Replace CSV files with a database (MySQL/PostgreSQL)
+Add user authentication
+Implement book search and filter features
+Add fines or penalties for overdue books
 
-Collections (ArrayList)
+📌 Author
+Inette Badenhorst
+LinkedIn:www.linkedin.com/in/inette-badenhorst-a66341143
 
-Java Time API (LocalDate, ChronoUnit)
-
-CSV-based data persistence
-
-
-📁 Project Structure
-LibraryManagementSystem/
-│
-├── src/
-│   └── library/
-│       ├── Main.java          # Application entry point
-│       ├── Library.java       # Core business logic
-│       ├── Book.java          # Book model
-│       ├── User.java          # User model
-│       └── FileManager.java   # File I/O handling
-│
-├── data/
-│   ├── books.csv              # Book storage
-│   └── users.csv              # User storage
-│
-├── README.md
-└── Library_Management_System_Assignment.pdf
-
-
-▶️ How to Run the Project
-
-Clone this repository:
-
-Open the project in Eclipse or VS Code
-
-Ensure the data/ folder exists at the project root
-
-Run Main.java
-
-Use the menu to interact with the system
-
-
-🧠 How the System Works
-
-Books and users are loaded from CSV files on startup
-
-Borrowing a book:
-
-Validates the user
-
-Checks availability
-
-Stores borrow date using LocalDate
-
-Returning a book resets its status
-
-Overdue books are calculated using ChronoUnit.DAYS
-
-All changes are saved back to CSV files automatically
-
-
-📊 Sample Menu Output
---- Library Management System ---
-1. View Books
-2. Borrow Book
-3. Return Book
-4. View User
-5. Borrowed Books Report
-6. Overdue Books Report
-0. Exit
