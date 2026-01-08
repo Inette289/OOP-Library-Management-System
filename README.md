@@ -62,21 +62,17 @@ library/
    └─ users.csv
 
 📄 Sample CSV Format
-
 books.csv
-
 # id,title,author,borrowed,userId,borrowDate
 1,The Alchemist,Paulo Coelho,false,-1,
 2,1984,George Orwell,false,-1,
 
 users.csv
-
 # id,name
 1,John Doe
 2,Jane Smith
 
 🎯 How it Works
-
 Program starts and loads books/users from CSV.
 Console menu allows the following actions:
 View all books
@@ -111,7 +107,6 @@ Implement book search and filter features
 Add fines or penalties for overdue books
 
 📌 Author
-
 Inette Badenhorst
 LinkedIn:www.linkedin.com/in/inette-badenhorst-a66341143
 
