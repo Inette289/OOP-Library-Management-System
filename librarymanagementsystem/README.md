@@ -1,79 +1,102 @@
-# 📚 Library Management System (Java)
+📚 Library Management System
+A console-based Library Management System built in Java.
+This project allows managing books and users, borrowing and returning books, tracking overdue items, and persisting data using CSV files.
 
-A console-based **Library Management System** built in Java using **Object-Oriented Programming (OOP)** principles and **CSV file storage**.
+🚀 Features
+Book Management
+View all books
+Borrow and return books
+Tracks borrowing user and borrow date
+User Management
+View all users
+Store unique user IDs
+Reports
+Borrowed Books Report
+Overdue Books Report (books borrowed for more than 14 days)
+Input Validation
+Prevents crashes from invalid input (InputMismatchException, NumberFormatException)
+Data Persistence
+All data is stored in CSV files for persistence between runs
+Robust Console UI
+Menu-driven system with safe input handling
 
-This project allows users to view books, borrow and return books, manage users, and generate reports such as borrowed and overdue books.
+🏗️ Technologies Used
+Language: Java
+IDE: VS Code / Eclipse
+File Handling: BufferedReader, BufferedWriter
+Java Time API: LocalDate, ChronoUnit for overdue calculation
+Data Storage: CSV files
+OOP Concepts: Encapsulation, composition, modular design
 
----
+🛠️ Installation & Running
+Clone the repository
+git clone https://github.com/yourusername/library-management-system.git
 
-## 🚀 Features
+Open in IDE (VS Code, Eclipse, IntelliJ)
+Ensure CSV files exist under data/ folder:
+data/books.csv
+data/users.csv
+CSV headers are required, e.g., # id,title,author,borrowed,userId,borrowDate
+Run the program
+java -cp bin library.Main
 
-- 📖 View available books
-- 👤 View registered users
-- 📥 Borrow a book (linked to a user)
-- 📤 Return a book
-- 📊 Borrowed books report
-- ⏰ Overdue books report (after 14 days)
-- 💾 Persistent storage using CSV files
-
----
-
-## 🛠️ Technologies Used
-
-- **Java**
-- **OOP (Encapsulation, Separation of Concerns)**
-- **File I/O (BufferedReader / BufferedWriter)**
-- **Collections (ArrayList)**
-- **java.time.LocalDate**
-
----
-
-## 📁 Project Structure
-LibraryManagementSystem/
+🧩 Project Structure
+library/
 │
-├── src/
-│ └── library/
-│ ├── Main.java
-│ ├── Library.java
-│ ├── Book.java
-│ ├── User.java
-│ └── FileManager.java
-│
-├── data/
-│ ├── books.csv
-│ └── users.csv
-│
-├── README.md
-└── Library_Management_System_Assignment.pdf
+├─ Main.java         # Console UI
+├─ Library.java      # Business logic
+├─ Book.java         # Book model
+├─ User.java         # User model
+├─ FileManager.java  # File I/O
+└─ data/
+   ├─ books.csv
+   └─ users.csv
 
-## ▶️ How to Run
+📄 Sample CSV Format
 
-1. Open the project in **Eclipse or VS Code**
-2. Ensure the `data/` folder exists at project root level
-3. Run `Main.java`
-4. Use the menu to interact with the system
+books.csv
+# id,title,author,borrowed,userId,borrowDate
+1,The Alchemist,Paulo Coelho,false,-1,
+2,1984,George Orwell,false,-1,
 
----
 
-## 🧠 Key Learning Outcomes
+users.csv
+# id,name
+1,John Doe
+2,Jane Smith
 
-- Applied real-world OOP design
-- Implemented file persistence with CSV
-- Built menu-driven console applications
-- Practiced debugging and error handling
+🎯 How it Works
+Program starts and loads books/users from CSV.
+Console menu allows the following actions:
+View all books
+Borrow a book
+Return a book
+View all users
+Generate borrowed books report
+Generate overdue books report
+User input is validated to prevent crashes.
+Changes are automatically saved to CSV files.
 
----
+🧠 Key Concepts Demonstrated
+Object-Oriented Programming (OOP)
+Classes with encapsulated data
+Modular design
+File Handling
+Reading and writing CSV files
+Exception Handling
+Prevent InputMismatchException and NumberFormatException
+Java Time API
+Track borrowing and overdue days
+Robust console interface
+Menu system with input validation
 
-## 📌 Future Improvements
+🛠️ Future Improvements
+Add a GUI (JavaFX/Swing)
+Replace CSV files with a database (MySQL/PostgreSQL)
+Add user authentication
+Implement book search and filter features
+Add fines or penalties for overdue books
 
-- Add input validation
-- Add GUI (JavaFX / Swing)
-- Add search functionality
-- Use a database (MySQL / SQLite)
-
----
-
-## 👩‍💻 Author
-
-**Inette Badenhorst**  
-Aspiring Data Analyst & Software Developer  
+📌 Author
+Inette Badenhorst
+LinkedIn: www.linkedin.com/in/inette-badenhorst-a66341143
