@@ -3,6 +3,7 @@
 A console-based Library Management System built in Java.
 This project allows managing books and users, borrowing and returning books, tracking overdue items, and persisting data using CSV files.
 
+
 🚀 Features
 
 Book Management
@@ -37,6 +38,7 @@ Robust Console UI
 
 Menu-driven system with safe input handling
 
+
 🏗️ Technologies Used
 
 Language: Java
@@ -50,6 +52,7 @@ Java Time API: LocalDate, ChronoUnit for overdue calculation
 Data Storage: CSV files
 
 OOP Concepts: Encapsulation, composition, modular design
+
 
 🛠️ Installation & Running
 
@@ -72,7 +75,9 @@ Run the program
 
 java -cp bin library.Main
 
+
 🧩 Project Structure
+
 library/
 │
 ├─ Main.java         # Console UI
@@ -99,6 +104,7 @@ users.csv
 1,John Doe
 2,Jane Smith
 
+
 🎯 How it Works
 
 Program starts and loads books/users from CSV.
@@ -120,6 +126,7 @@ Generate overdue books report
 User input is validated to prevent crashes.
 
 Changes are automatically saved to CSV files.
+
 
 🧠 Key Concepts Demonstrated
 
@@ -145,6 +152,7 @@ Robust console interface
 
 Menu system with input validation
 
+
 🛠️ Future Improvements
 
 Add a GUI (JavaFX/Swing)
@@ -162,3 +170,4 @@ Add fines or penalties for overdue books
 Inette Badenhorst
 
 LinkedIn: www.linkedin.com/in/inette-badenhorst-a66341143
+
